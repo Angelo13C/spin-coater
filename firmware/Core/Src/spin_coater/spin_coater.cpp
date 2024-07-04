@@ -33,7 +33,8 @@ SpinCoater::~SpinCoater()
 
 SpinCoater SpinCoater::withDefaultConfiguration(SPI_HandleTypeDef* mct8316zSpiHandle, SPI_HandleTypeDef* ili9341SpiHandle, SPI_HandleTypeDef* xpt2046SpiHandle, TIM_HandleTypeDef* motorPwmTimer, TIM_HandleTypeDef* motorSpeedFeedbackTimer)
 {
-	// TODO: choose which pins to use for the things connected to the microcontroller. For now I've just put GPIOF and GPIO_PIN_0 as a placeholder.
+	// TODO: Decide which pins to use for the devices connected to the microcontroller.
+	// For now, I've used GPIOF and GPIO_PIN_0 as placeholders.
 
 	Keypad<1, 1> keypad(std::array<Pin, 1>{{
 		GPIOF,
